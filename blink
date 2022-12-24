@@ -1,0 +1,11 @@
+import machine
+import time
+pin = machine.Pin(2, machine.Pin.OUT)
+#or i in range(5):
+while True:    
+   pin.on()
+   time.sleep(0.3)
+   pin.off()  
+   time.sleep(0.3)
+   print(pin)
+  # print(i)
