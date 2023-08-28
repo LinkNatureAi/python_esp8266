@@ -1,11 +1,9 @@
 import machine
 import time
+
 pin = machine.Pin(2, machine.Pin.OUT)
-#or i in range(5):
-while True:    
-   pin.on()
-   time.sleep(0.3)
-   pin.off()  
-   time.sleep(0.3)
-   print(pin)
-  # print(i)
+
+while True:
+    pin.value(not pin.value())
+    time.sleep(1)
+    print("LED status:", "ON" if pin.value() else "OFF")
